@@ -1,11 +1,8 @@
 import { ResumeData } from "./types";
+import { PERSONAL_INFO } from "./shared";
 
 export const softwareEngineerData: ResumeData = {
-  name: "Steve Wachira",
-  location: "Worcester, MA",
-  email: "steve@stevewachira.com",
-  linkedin: "https://linkedin.com/in/stevewachira",
-  website: "https://stevewachira.com",
+  ...PERSONAL_INFO,
   role: "Software Engineer",
   resumeFile: "/Steve-Wachira-SE-Resume.pdf",
   summary:

@@ -1,15 +1,12 @@
 import { ResumeData } from "./types";
+import { PERSONAL_INFO } from "./shared";
 
 export const supportEngineerData: ResumeData = {
-  name: "Steve Wachira",
-  location: "Worcester, MA",
-  email: "steve@stevewachira.com",
-  linkedin: "https://linkedin.com/in/stevewachira",
-  website: "https://stevewachira.com",
+  ...PERSONAL_INFO,
   role: "Support Engineer",
   resumeFile: "/Steve-Wachira-Support-Resume.pdf",
   summary:
-    "Technical Support Specialist with 5+ years of front-end engineering experience in startup environments. Combines deep product knowledge with hands-on development skills to resolve customer issues, create onboarding resources, and build internal admin tools that streamline support operations. Proven ability to triage bugs, produce tutorial content that reduces support volume, and collaborate cross-functionally to improve the customer experience.",
+    "Technical Support Specialist with 7+ years of front-end engineering experience in startup environments. Combines deep product knowledge with hands-on development skills to resolve customer issues, create onboarding resources, and build internal admin tools that streamline support operations. Proven ability to triage bugs, produce tutorial content that reduces support volume, and collaborate cross-functionally to improve the customer experience.",
   skills: [
     {
       category: "Support",

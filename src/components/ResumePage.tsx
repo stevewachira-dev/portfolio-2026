@@ -8,6 +8,27 @@ interface ResumePageProps {
   currentRole: "software" | "support";
 }
 
+function ContactLink({
+  href,
+  children,
+  external,
+}: {
+  href: string;
+  children: React.ReactNode;
+  external?: boolean;
+}) {
+  return (
+    <a
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      className="text-fg underline underline-offset-2 transition-opacity hover:opacity-60"
+    >
+      {children}
+    </a>
+  );
+}
+
 export default function ResumePage({ data, currentRole }: ResumePageProps) {
   return (
     <div className="page-transition mx-auto min-h-screen max-w-2xl px-6 py-12 sm:px-8 sm:py-16">
@@ -40,25 +61,17 @@ export default function ResumePage({ data, currentRole }: ResumePageProps) {
         </div>
         <p className="text-sm text-muted">
           {data.location} &middot;{" "}
-          <a href={`mailto:${data.email}`} className="text-fg underline underline-offset-2 transition-opacity hover:opacity-60">
-            {data.email}
-          </a>{" "}
+          <ContactLink href={`mailto:${data.email}`}>{data.email}</ContactLink>{" "}
           &middot;{" "}
-          <a href={data.linkedin} target="_blank" rel="noopener noreferrer" className="text-fg underline underline-offset-2 transition-opacity hover:opacity-60">
-            LinkedIn
-          </a>{" "}
+          <ContactLink href={data.linkedin} external>LinkedIn</ContactLink>{" "}
           &middot;{" "}
-          <a href={data.website} target="_blank" rel="noopener noreferrer" className="text-fg underline underline-offset-2 transition-opacity hover:opacity-60">
-            stevewachira.com
-          </a>
+          <ContactLink href={data.website} external>stevewachira.com</ContactLink>
         </p>
       </div>
 
       <div className="mt-12 space-y-10">
         <Section title="Summary">
-          <p className="text-sm leading-relaxed text-fg">
-            {data.summary}
-          </p>
+          <p className="text-sm leading-relaxed text-fg">{data.summary}</p>
         </Section>
 
         <Section title="Skills">
@@ -66,16 +79,11 @@ export default function ResumePage({ data, currentRole }: ResumePageProps) {
             {data.skills.map((group, i) => (
               <div key={i}>
                 {group.category && (
-                  <p className="mb-1.5 text-xs font-medium text-muted">
-                    {group.category}
-                  </p>
+                  <p className="mb-1.5 text-xs font-medium text-muted">{group.category}</p>
                 )}
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full border border-border px-3 py-1 text-xs text-fg"
-                    >
+                    <span key={skill} className="rounded-full border border-border px-3 py-1 text-xs text-fg">
                       {skill}
                     </span>
                   ))}

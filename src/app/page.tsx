@@ -1,5 +1,27 @@
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import RoleCard from "@/components/RoleCard";
+
+const roles = [
+  {
+    href: "/software-engineer",
+    title: "Software Engineer",
+    subtitle: "React, Vue, TypeScript, Tauri",
+    cta: "View Resume",
+  },
+  {
+    href: "/support-engineer",
+    title: "Support Engineer",
+    subtitle: "Triage, Onboarding, Documentation",
+    cta: "View Resume",
+  },
+  {
+    href: "/tech-creator",
+    title: "Tech Creator",
+    subtitle: "Video Production & Editing",
+    cta: "View Work",
+  },
+];
 
 export default function Home() {
   return (
@@ -19,50 +41,9 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
-          <Link
-            href="/software-engineer"
-            className="group relative border border-border px-10 py-8 transition-all hover:border-border-hover"
-          >
-            <span className="block text-lg font-medium tracking-tight text-fg">
-              Software Engineer
-            </span>
-            <span className="mt-1 block text-xs text-muted">
-              React, Vue, TypeScript, Tauri
-            </span>
-            <span className="mt-4 block text-xs text-subtle transition-colors group-hover:text-fg">
-              View Resume &rarr;
-            </span>
-          </Link>
-
-          <Link
-            href="/support-engineer"
-            className="group relative border border-border px-10 py-8 transition-all hover:border-border-hover"
-          >
-            <span className="block text-lg font-medium tracking-tight text-fg">
-              Support Engineer
-            </span>
-            <span className="mt-1 block text-xs text-muted">
-              Triage, Onboarding, Documentation
-            </span>
-            <span className="mt-4 block text-xs text-subtle transition-colors group-hover:text-fg">
-              View Resume &rarr;
-            </span>
-          </Link>
-
-          <Link
-            href="/tech-creator"
-            className="group relative border border-border px-10 py-8 transition-all hover:border-border-hover"
-          >
-            <span className="block text-lg font-medium tracking-tight text-fg">
-              Tech Creator
-            </span>
-            <span className="mt-1 block text-xs text-muted">
-              Video Production & Editing
-            </span>
-            <span className="mt-4 block text-xs text-subtle transition-colors group-hover:text-fg">
-              View Work &rarr;
-            </span>
-          </Link>
+          {roles.map((role) => (
+            <RoleCard key={role.href} {...role} />
+          ))}
         </div>
       </div>
     </div>
