@@ -41,9 +41,33 @@ export const supportEngineerData: ResumeData = {
   ],
   experience: [
     {
+      company: "Stealth Healthcare Startup",
+      title: "Software Engineer (Support & Compliance)",
+      dates: "Jul 2025 - Present",
+      location: "Florida, US",
+      bullets: [
+        "Built a secure, HIPAA-compliant admin tool for staff to document meeting minutes, account health notes, insurance, tax records, and medical notes",
+        "Signed AWS BAA and enabled CloudTrail to establish HIPAA-compliant infrastructure, reducing compliance risk for the healthcare application",
+        "Created Cognito user pools for prod and dev environments to replace Supabase Auth, enabling secure identity management for patient-facing features",
+        "Integrated Stripe payment processing end-to-end, enabling recurring billing and reducing payment-related support inquiries",
+        "Collaborated with CEO and CTO on incident response using Jira and Slack, reducing resolution time for customer-impacting issues",
+      ],
+    },
+    {
+      company: "VibeCheck",
+      title: "Founder & Technical Support Lead",
+      dates: "Nov 2024 - Apr 2026",
+      location: "Boston, MA",
+      bullets: [
+        "Built and launched a desktop security audit tool for AI/no-code builders using Vue, Vuetify, and Jest, identifying 150+ critical security issues",
+        "Created a non-technical reporting layer translating complex security findings into plain-language summaries for non-developer users",
+        "Designed and shipped a notarized macOS desktop app end-to-end, managing the full release cycle via GitHub Releases",
+      ],
+    },
+    {
       company: "Trender.ai",
       title: "Technical Support & Front-end Engineer",
-      dates: "Apr 2022 — Jan 2024",
+      dates: "Apr 2022 - Jan 2024",
       location: "Boston, MA",
       bullets: [
         "Resolved customer-submitted support tickets and bugs, diagnosing front-end issues and coordinating fixes to maintain user satisfaction",
@@ -54,32 +78,9 @@ export const supportEngineerData: ResumeData = {
       ],
     },
     {
-      company: "Stealth Healthcare Startup",
-      title: "Software Engineer (Support & Compliance)",
-      dates: "Jul 2025 — Present",
-      location: "Florida, US",
-      bullets: [
-        "Built a secure, HIPAA-compliant admin tool for staff to document meeting minutes, account health notes, insurance, tax records, and medical notes",
-        "Authored the HIPAA compliance framework defining security practices for protected health information across the platform",
-        "Integrated Stripe payment processing end-to-end, enabling recurring billing and reducing payment-related support inquiries",
-        "Partnered with CEO and CTO on incident response using Jira and Slack, reducing resolution time for customer-impacting issues",
-      ],
-    },
-    {
-      company: "VibeCheck",
-      title: "Founder & Technical Support Lead",
-      dates: "Nov 2024 — Present",
-      location: "Boston, MA",
-      bullets: [
-        "Built and launched a desktop security audit tool for AI/no-code builders using Vue, Vuetify, and Jest, identifying 150+ critical security issues",
-        "Created a non-technical reporting layer translating complex security findings into plain-language summaries for non-developer users",
-        "Designed and shipped a notarized macOS desktop app end-to-end, managing the full release cycle via GitHub Releases",
-      ],
-    },
-    {
       company: "DYSE",
       title: "Founding Front-end Engineer",
-      dates: "Aug 2021 — Mar 2022",
+      dates: "Aug 2021 - Mar 2022",
       location: "Boston, MA",
       bullets: [
         "Built and tested the app's front-end infrastructure, receiving positive feedback from beta testers and founders within two sprints",
@@ -88,7 +89,7 @@ export const supportEngineerData: ResumeData = {
     {
       company: "Big Nerd Ranch",
       title: "Web Development Intern",
-      dates: "Apr 2021 — Aug 2021",
+      dates: "Apr 2021 - Aug 2021",
       location: "Atlanta, GA",
       bullets: [
         "Developed a responsive, test-driven React app with TypeScript and Jest; implemented data-validation scripts that raised data quality and reduced errors",
